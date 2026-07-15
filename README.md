@@ -8,6 +8,14 @@ Opinionated shareable [oxlint](https://oxc.rs/docs/guide/usage/linter) preset:
 - `typeAware` + `typeCheck` on
 - correctness `error`; suspicious/sort mostly `warn`
 
+## Install
+
+```bash
+pnpm add -D @kvoon/oxlint-config oxlint oxlint-tsgolint
+```
+
+Peers: `oxlint` `^1.74.0`, `oxlint-tsgolint` `^0.24.0`. Stylistic + perfectionist ship as dependencies of this package.
+
 ## Usage
 
 ```ts
@@ -30,7 +38,5 @@ export default defineConfig({
   },
 })
 ```
-
-Peers: `oxlint` `^1.74.0`, `oxlint-tsgolint` `^0.24.0`. Stylistic + perfectionist ship as dependencies of this package.
 
 This repo dogfoods the preset (`oxlint.config.ts`). `playground/vue3` is a Vite Vue3+TS app for manual lint checks.
