@@ -1,11 +1,19 @@
 {
   "name": "@kvoon/oxlint-config",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@11.7.0",
   "description": "Opinionated shareable oxlint config (style, vue, sort, type-aware)",
   "author": "Kevin Kwong <kwongliegaai@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/kvoon3/oxlint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvoon3/oxlint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kvoon3/oxlint-config/issues"
+  },
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/kvoon3"
@@ -32,6 +40,9 @@
   "scripts": {
     "dev": "tsdown --watch",
     "build": "tsdown",
+    "prepublishOnly": "pnpm build",
+    "release": "nlx bumpp && pnpm publish",
+    "publish:ci": "pnpm publish --no-git-checks",
     "up": "nlx taze -I major",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
