@@ -1,0 +1,7 @@
+{
+  "runOnSave": {
+    "*.{js,jsx,ts,tsx,mjs,cjs,vue}": [
+      "pnpm exec oxlint --disable-nested-config '${{filepath}}' --fix"
+    ]
+  }
+}

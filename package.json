@@ -1,0 +1,61 @@
+{
+  "name": "@kvoon/oxlint-config",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@11.7.0",
+  "description": "Opinionated shareable oxlint config (style, vue, sort, type-aware)",
+  "author": "Kevin Kwong <kwongliegaai@gmail.com>",
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/kvoon3"
+  },
+  "keywords": [
+    "oxlint",
+    "oxlint-config",
+    "stylistic",
+    "vue",
+    "perfectionist"
+  ],
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "up": "nlx taze -I major",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix ."
+  },
+  "peerDependencies": {
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.24.0"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint-plugin-perfectionist": "^5.10.0"
+  },
+  "devDependencies": {
+    "@antfu/ni": "catalog:cli",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.24.0",
+    "tsdown": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "vitest": "catalog:cli"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec oxlint ."
+  }
+}
