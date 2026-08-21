@@ -13,7 +13,7 @@ packages:
 catalogs:
   cli:
     '@antfu/ni': ^30.1.0
-    tsdown: ^0.22.2
+    tsdown: ^0.22.14
     tsx: latest
     typescript: ^6.0.3
     vitest: ^3.0.0
