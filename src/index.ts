@@ -63,11 +63,11 @@ export default function kvoon(): OxlintConfig {
       'stylistic/block-spacing': 'warn',
       'stylistic/key-spacing': 'warn',
 
-      'perfectionist/sort-imports': 'warn',
+      'perfectionist/sort-imports': ['warn', { newlinesBetween: 'ignore' }],
       'perfectionist/sort-named-imports': 'warn',
       'perfectionist/sort-exports': 'warn',
       'perfectionist/sort-named-exports': 'warn',
-      'perfectionist/sort-objects': 'warn',
+      'perfectionist/sort-objects': 'off',
       'perfectionist/sort-object-types': 'warn',
       'perfectionist/sort-interfaces': 'warn',
       'perfectionist/sort-enums': 'warn',
