@@ -2,7 +2,7 @@ import { defineConfig } from 'tsdown'
 
 export default defineConfig({
   deps: {
-    neverBundle: ['oxlint', '@stylistic/eslint-plugin', 'eslint-plugin-perfectionist'],
+    neverBundle: ['oxlint', '@stylistic/eslint-plugin', 'eslint-plugin-perfectionist', 'eslint-plugin-command'],
   },
   dts: true,
   entry: ['./src/index.ts'],

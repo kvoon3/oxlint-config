@@ -1,3 +1,6 @@
+import type { OxlintConfig } from 'oxlint'
 import kvoon from './src/index.ts'
 
-export default kvoon()
+const config: OxlintConfig = kvoon()
+
+export default config

@@ -32,6 +32,7 @@ export default function kvoon(): OxlintConfig {
     jsPlugins: [
       { name: 'stylistic', specifier: '@stylistic/eslint-plugin' },
       { name: 'perfectionist', specifier: 'eslint-plugin-perfectionist' },
+      { name: 'command', specifier: 'eslint-plugin-command' },
     ],
     rules: {
       'import/no-named-export': 'off',
@@ -86,6 +87,8 @@ export default function kvoon(): OxlintConfig {
       'perfectionist/sort-import-attributes': 'warn',
       'perfectionist/sort-export-attributes': 'warn',
       'perfectionist/sort-arrays': 'warn',
+
+      'command/command': 'error',
     },
     overrides: [
       {

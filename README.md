@@ -14,7 +14,7 @@ Opinionated shareable [oxlint](https://oxc.rs/docs/guide/usage/linter) preset:
 pnpm add -D @kvoon/oxlint-config oxlint oxlint-tsgolint
 ```
 
-Peers: `oxlint` `^1.74.0`, `oxlint-tsgolint` `^0.24.0`. Stylistic + perfectionist ship as dependencies of this package.
+Peers: `oxlint` `^1.74.0`, `oxlint-tsgolint` `^0.24.0`. Stylistic + perfectionist + `eslint-plugin-command` ship as dependencies of this package.
 
 ## Usage
 

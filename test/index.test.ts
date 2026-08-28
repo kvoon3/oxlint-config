@@ -11,8 +11,10 @@ describe('kvoon()', () => {
       expect.arrayContaining([
         expect.objectContaining({ name: 'stylistic' }),
         expect.objectContaining({ name: 'perfectionist' }),
+        expect.objectContaining({ name: 'command', specifier: 'eslint-plugin-command' }),
       ]),
     )
+    expect(config.rules?.['command/command']).toBe('error')
     expect(config.options?.typeAware).toBe(true)
     expect(config.options?.typeCheck).toBe(true)
     expect(config.categories?.correctness).toBe('error')

@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint-plugin-command": "^4.0.0",
     "eslint-plugin-perfectionist": "^5.10.0"
   },
   "devDependencies": {
