@@ -55,7 +55,7 @@ export default function kvoon(): OxlintConfig {
       'stylistic/semi': ['error', 'never'],
       'stylistic/object-curly-spacing': ['warn', 'always'],
       'stylistic/arrow-parens': ['warn', 'as-needed'],
-      'stylistic/brace-style': ['warn', '1tbs', { allowSingleLine: true }],
+      'stylistic/brace-style': ['warn', 'stroustrup', { allowSingleLine: true }],
       'stylistic/keyword-spacing': 'warn',
       'stylistic/space-before-blocks': 'warn',
       'stylistic/comma-spacing': 'warn',
