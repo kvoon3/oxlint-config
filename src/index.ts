@@ -6,8 +6,6 @@ import { defineConfig } from 'oxlint'
 export default function kvoon(): OxlintConfig {
   return defineConfig({
     // Setting `plugins` replaces defaults — keep the built-in set + vue + import.
-    // perfectionist: leave rule-map keys unsorted (config readability > alpha keys)
-    /* oxlint-disable perfectionist/sort-objects -- rule tables are hand-grouped */
     plugins: ['eslint', 'typescript', 'unicorn', 'oxc', 'import', 'vue'],
     categories: {
       correctness: 'error',
@@ -64,29 +62,24 @@ export default function kvoon(): OxlintConfig {
       'stylistic/block-spacing': 'warn',
       'stylistic/key-spacing': 'warn',
 
-      'perfectionist/sort-imports': ['warn', { newlinesBetween: 'ignore' }],
+      'perfectionist/sort-imports': ['warn', {
+        groups: [
+          'type-import',
+          ['type-parent', 'type-sibling', 'type-index', 'type-internal'],
+          'value-builtin',
+          'value-external',
+          'value-internal',
+          ['value-parent', 'value-sibling', 'value-index'],
+          'side-effect',
+          'ts-equals-import',
+          'unknown',
+        ],
+        newlinesBetween: 'ignore',
+        newlinesInside: 'ignore',
+      }],
       'perfectionist/sort-named-imports': 'warn',
       'perfectionist/sort-exports': 'warn',
       'perfectionist/sort-named-exports': 'warn',
-      'perfectionist/sort-objects': 'off',
-      'perfectionist/sort-object-types': 'warn',
-      'perfectionist/sort-interfaces': 'warn',
-      'perfectionist/sort-enums': 'warn',
-      'perfectionist/sort-union-types': 'warn',
-      'perfectionist/sort-intersection-types': 'warn',
-      'perfectionist/sort-array-includes': 'warn',
-      'perfectionist/sort-classes': 'warn',
-      'perfectionist/sort-maps': 'warn',
-      'perfectionist/sort-sets': 'warn',
-      'perfectionist/sort-switch-case': 'warn',
-      'perfectionist/sort-jsx-props': 'warn',
-      'perfectionist/sort-heritage-clauses': 'warn',
-      'perfectionist/sort-decorators': 'warn',
-      'perfectionist/sort-modules': 'warn',
-      'perfectionist/sort-variable-declarations': 'warn',
-      'perfectionist/sort-import-attributes': 'warn',
-      'perfectionist/sort-export-attributes': 'warn',
-      'perfectionist/sort-arrays': 'warn',
 
       'command/command': 'error',
     },
