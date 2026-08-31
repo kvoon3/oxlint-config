@@ -41,7 +41,7 @@
     "dev": "tsdown --watch",
     "build": "tsdown",
     "prepublishOnly": "pnpm build",
-    "release": "nlx bumpp && pnpm publish",
+    "release": "nlx bumpp && npm publish",
     "publish:ci": "pnpm publish --no-git-checks",
     "up": "nlx taze -I major",
     "typecheck": "tsc --noEmit",
