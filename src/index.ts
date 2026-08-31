@@ -2,15 +2,12 @@ import type { OxlintConfig } from 'oxlint'
 
 import { defineConfig } from 'oxlint'
 
-/** Opinionated oxlint preset. Zero-arg; local overrides via `extends: [kvoon()]`. */
 export default function kvoon(): OxlintConfig {
   return defineConfig({
-    // Setting `plugins` replaces defaults — keep the built-in set + vue + import.
     plugins: ['eslint', 'typescript', 'unicorn', 'oxc', 'import', 'vue'],
     categories: {
       correctness: 'error',
       suspicious: 'warn',
-      // style via stylistic jsPlugin subset below — native style category is too noisy
       style: 'off',
     },
     options: {
@@ -33,11 +30,13 @@ export default function kvoon(): OxlintConfig {
       { name: 'command', specifier: 'eslint-plugin-command' },
     ],
     rules: {
+      'no-unused-vars': 'warn',
+
       'import/no-named-export': 'off',
       'import/prefer-default-export': 'off',
       'import/group-exports': 'off',
-      'import/no-unassigned-import': 'off', // side-effect CSS / polyfills
-      'sort-imports': 'off', // perfectionist/sort-imports owns this
+      'import/no-unassigned-import': 'off',
+      'sort-imports': 'off',
 
       'typescript/consistent-type-imports': ['warn', {
         prefer: 'type-imports',
