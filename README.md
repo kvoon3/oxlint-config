@@ -4,6 +4,7 @@ Opinionated shareable [oxlint](https://oxc.rs/docs/guide/usage/linter) preset:
 
 - style via `@stylistic/eslint-plugin` (curated; **single quotes**, **no semis** as errors)
 - vue rules (plugin on, rules scoped to `*.vue`)
+- Antfu rules via `eslint-plugin-antfu`
 - sort via `eslint-plugin-perfectionist`
 - `typeAware` + `typeCheck` on
 - correctness `error`; suspicious/sort mostly `warn`
@@ -14,7 +15,7 @@ Opinionated shareable [oxlint](https://oxc.rs/docs/guide/usage/linter) preset:
 pnpm add -D @kvoon/oxlint-config oxlint oxlint-tsgolint
 ```
 
-Peers: `oxlint` `^1.74.0`, `oxlint-tsgolint` `^0.24.0`. Stylistic + perfectionist + `eslint-plugin-command` ship as dependencies of this package.
+Peers: `oxlint` `^1.74.0`, `oxlint-tsgolint` `^0.24.0`. Antfu + stylistic + perfectionist + `eslint-plugin-command` ship as dependencies of this package.
 
 ## Usage
 

@@ -25,12 +25,24 @@ export default function kvoon(): OxlintConfig {
       'playground/*/dist/**',
     ],
     jsPlugins: [
+      { name: 'antfu', specifier: 'eslint-plugin-antfu' },
       { name: 'stylistic', specifier: '@stylistic/eslint-plugin' },
       { name: 'perfectionist', specifier: 'eslint-plugin-perfectionist' },
       { name: 'command', specifier: 'eslint-plugin-command' },
     ],
     rules: {
       'no-unused-vars': 'warn',
+
+      'antfu/consistent-chaining': 'warn',
+      'antfu/consistent-list-newline': 'warn',
+      'antfu/curly': 'warn',
+      'antfu/if-newline': 'warn',
+      'antfu/import-dedupe': 'warn',
+      'antfu/no-import-dist': 'warn',
+      'antfu/no-import-node-modules-by-path': 'warn',
+      'antfu/no-top-level-await': 'warn',
+      'antfu/no-ts-export-equal': 'warn',
+      'antfu/top-level-function': 'warn',
 
       'import/no-named-export': 'off',
       'import/prefer-default-export': 'off',
